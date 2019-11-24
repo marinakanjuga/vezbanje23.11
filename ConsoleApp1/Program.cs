@@ -30,11 +30,8 @@ namespace ConsoleApp1
                 brojevi.Add(n);
             }
             while (true);
-            int rez1 = brojevi.Max();
-            int rez2 = brojevi.Min();
-            int rezultat;
-            rezultat = rez1 - rez2;
-            Console.WriteLine("rezultat je {0} - {1} = {2}", rez1, rez2, rezultat);
+            
+            Console.WriteLine("najveci broj je {0}", brojevi.Max());
         }
 
 
