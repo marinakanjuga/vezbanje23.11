@@ -5,27 +5,28 @@ using System.Linq;
 namespace ConsoleApp1
 {
     class Program
-    {//fun koja ce kao ulazni par imati niz stringova. 
-        //fun treba da vrati duz najduzeg stringa, u klasi strings
+    {
         static void Main(string[] args)
         {
-            Console.WriteLine(Spejsovi("fjajf jj j"));
-            Console.ReadKey();
-           
-        }
-        static int Spejsovi(string rec)
-        {
-            int sum = 0;
 
-            for (int i = 0; i < rec.Length; i++)
-            {
-                if (char.IsWhiteSpace(rec[i]))
-                {
-                    sum++;
-                }
-            }
-            return sum;
+            radSaKlasom();
+            Console.ReadKey();
         }
+       
+        static void radSaKlasom () 
+        {
+            List<int> numbers = new List<int>();
+            numbers.Add(24);
+            numbers.Add(20);
+
+            NovaKlasa.logFileName = "C:\\proba.log";
+            foreach (int i in numbers) 
+            {
+                NovaKlasa.log("uneti broj je" + Convert.ToString(i));
+            }
+
+        }      
+         
 
     
 
