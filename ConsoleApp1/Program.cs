@@ -5,7 +5,8 @@ using System.Linq;
 namespace ConsoleApp1
 {
     class Program
-    {//pronaci najveci broj u nizy , napisati fun koja ce kao ulazni parametar imati niz
+    {//napisati fun koja ce kao ulazni parametar imati niz
+        //vratiti razliku izmedju najmanjeg i najveceg broja
         static void Main(string[] args)
         {
             najveciBroj();
@@ -29,7 +30,11 @@ namespace ConsoleApp1
                 brojevi.Add(n);
             }
             while (true);
-            Console.WriteLine("najveci broj je {0}", brojevi.Max());
+            int rez1 = brojevi.Max();
+            int rez2 = brojevi.Min();
+            int rezultat;
+            rezultat = rez1 - rez2;
+            Console.WriteLine("rezultat je {0} - {1} = {2}", rez1, rez2, rezultat);
         }
 
 
