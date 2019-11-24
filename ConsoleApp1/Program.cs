@@ -13,37 +13,21 @@ namespace ConsoleApp1
             Console.ReadKey();
 
         }
-        static void najduziString()
+        //static string najduziString()
+        //{
+            string[] cars = new string[] { "Volvo", "BMW", "Ford", "Mazdaaa" };
+            string i = cars.Max();
+            int b = Convert.ToInt32(i);
+            
+            Console.WriteLine(Convert.ToInt32(i));
+        //}
+        static int suma(int[] b)
         {
-            List<string> stringovi = new List<string>();
-            string a;
-            int n;
-            do
+            int max = b[0]; 
+            for (int i = 1; i < b.Length; i++)
             {
-                Console.WriteLine("upisi string");
-                a = Console.ReadLine();             
-                if (a == "")
-                {
-                    break;
-                }               
-                n = Convert.ToInt32(a);
-                stringovi.Add(a);
-                Console.WriteLine(suma(n));
-            }
-            while (true);
-            //Console.WriteLine("najduzi string je {0}", stringovi.Max());
-        }
 
-        static int suma (int n) 
-        {
-            string m = Convert.ToString(n);
-            int suma = 0;
-            for (int i = 0; i < m.Length; i++)
-            {
-                suma = suma + Convert.ToInt32(m.Substring(i, 1));
             }
-            return suma;
-
         }
 
 
@@ -55,9 +39,7 @@ namespace ConsoleApp1
 
 
 
-
-        
     }
-      
- }
+
+}
 
