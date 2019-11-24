@@ -1,98 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Linq;
 
 namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            ZadatakSumaListe();
-            Console.ReadKey();
-
-            static void ZadatakSumaListe()
+        {  
+            nizovi();         
+                       
+            static void nizovi () 
             {
-                List<int> numbers = new List<int>();
-                string n;
-                int broj;
-
-                do
+                int[] brojevi = new int[10];
+                int n;
+                for (n=0; n < brojevi.Length; n++) 
                 {
-                    n = Console.ReadLine();
-                    if (string.IsNullOrEmpty(n))
-                    {
-                        break;
-                    }
-                    broj = Convert.ToInt32(n);
-                    numbers.Add(broj);
-                    
-                } while (true);
-
-                Console.WriteLine("suma je {0} ", CalculateSum(numbers));
+                    brojevi[n] = n * 10; 
+                    Console.WriteLine("vrednost clanova {0} = {1}", n, brojevi[n]);
+                }
+                Console.WriteLine("vrednsot sume je {0}", calculate(brojevi));
             }
-           // for (int i = 0; i<numbers.length; i++) 
-           // {
-            
-            //}
-            static int CalculateSum (List<int> numbers) 
+            static int calculate(int [] brojevi) 
             {
-               int sum = 0;
-            foreach (int num in numbers) 
-                {
-                    sum += num;
+                int sum = 0;
+            foreach (int n in brojevi) 
+                {                   
+                    sum = sum + n;
                 }
                 return sum;
-            }
-               
-            
-            
-            
-            //string operacija, broj1, broj2;
-                //int num1, num2;
-                //broj1 = Console.ReadLine();
-                //broj2 = Console.ReadLine();
-
-                //operacija = Console.ReadLine();
-                //while (true)
-                //{
-                //    if (operacija != "" || broj1 != "" || broj2 != "")
-                //    {
-                //        num1 = Convert.ToInt32(broj1);
-                //        num2 = Convert.ToInt32(broj2);
-                //        int rez = rezultat(num1, num2, operacija);
-                //        Console.WriteLine("{0}, {1}, {2} = {3}", num1, num2, operacija, rez);
-                //    }
-                //    else
-                //    {
-                //        num1 = 2;
-                //        num2 = 2;
-                //        int rez = rezultat(num1, num2, operacija);
-                //        Console.WriteLine("{0}, {1}, {2} = {3}", num1, num2, operacija, rez);
-                //    }
-                //}
-                //static int rezultat(int num1, int num2, string operacija)
-                //{
-                //    int k = 0;
-                //    if (operacija == "+")
-                //    {
-                //        k = num1 + num2;
-                //    }
-                //    else if (operacija == "-")
-                //    {
-                //        k = num1 - num2;
-                //    }
-                //    else if (operacija == "*")
-                //    {
-                //        k = num1 * num2;
-                //    }
-                //    else if (operacija == "/")
-                //    {
-                //        k = num1 / num2;
-                //    }
-                //    return k;
-                //}
+                Console.WriteLine("vrednost je {0}", sum);
                 Console.ReadKey();
+            }
+            
+            
+            
+           
+               
+          
+            
+           
+           
+                
+               
 
         }
     }
