@@ -9,26 +9,38 @@ namespace ConsoleApp1
         //fun treba da vrati duz najduzeg stringa, u klasi strings
         static void Main(string[] args)
         {
-            najduziString();
-            Console.ReadKey();
+            nizovi();
 
-        }
-        //static string najduziString()
-        //{
-            string[] cars = new string[] { "Volvo", "BMW", "Ford", "Mazdaaa" };
-            string i = cars.Max();
-            int b = Convert.ToInt32(i);
-            
-            Console.WriteLine(Convert.ToInt32(i));
-        //}
-        static int suma(int[] b)
-        {
-            int max = b[0]; 
-            for (int i = 1; i < b.Length; i++)
+            static void nizovi()
             {
+                najveciBroj();
+                Console.ReadKey();
 
             }
+
+            static void najveciBroj()
+            {
+                int[] myNumbers = { 1, 2, 3, 5, 6, 8 };
+               
+                //Console.WriteLine("najveci broj je {0}", myNumbers.Max());
+                int rez1 = myNumbers.Max();
+                int rez2 = myNumbers.Min();
+                int rezultat;
+                rezultat = rez1 - rez2;
+                Console.WriteLine("rezultat je {0} - {1} = {2}", rez1, rez2, rezultat);
+            }
+
+
+
         }
+
+
+
+
+
+
+    
+
 
 
 
