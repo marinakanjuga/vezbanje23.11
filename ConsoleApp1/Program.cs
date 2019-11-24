@@ -5,46 +5,45 @@ using System.Linq;
 namespace ConsoleApp1
 {
     class Program
-    {
+    {//pronaci najveci broj u nizy , napisati fun koja ce kao ulazni parametar imati niz
         static void Main(string[] args)
-        {  
-            nizovi();         
-                       
-            static void nizovi () 
-            {
-                int[] brojevi = new int[10];
-                int n;
-                for (n=0; n < brojevi.Length; n++) 
-                {
-                    brojevi[n] = n * 10; 
-                    Console.WriteLine("vrednost clanova {0} = {1}", n, brojevi[n]);
-                }
-                Console.WriteLine("vrednsot sume je {0}", calculate(brojevi));
-            }
-            static int calculate(int [] brojevi) 
-            {
-                int sum = 0;
-            foreach (int n in brojevi) 
-                {                   
-                    sum = sum + n;
-                }
-                return sum;
-                Console.WriteLine("vrednost je {0}", sum);
-                Console.ReadKey();
-            }
-            
-            
-            
-           
-               
-          
-            
-           
-           
-                
-               
+        {
+            najveciBroj();
+            Console.ReadKey();
 
         }
+        static void najveciBroj()
+        {
+            List<int> brojevi = new List<int>();
+            string a;
+            int n;
+            do
+            {
+                Console.WriteLine("upisi broj");
+                a = Console.ReadLine();
+                if (a == "")
+                {
+                    break;                  
+                }
+                n = Convert.ToInt32(a);
+                brojevi.Add(n);
+            }
+            while (true);
+            Console.WriteLine("najveci broj je {0}", brojevi.Max());
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        
     }
       
  }
