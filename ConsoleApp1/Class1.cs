@@ -27,9 +27,15 @@ namespace ConsoleApp1
             Console.WriteLine("unesite broj redova");
             int a;
             a = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i <= a; i++) 
+            int b = 1;
+            for (int i = 1; i <= a; i++)
             {
-                Console.WriteLine(i);
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("{0}", b);
+                    b++;
+                }
+                Console.WriteLine();
             }
         }
     }
