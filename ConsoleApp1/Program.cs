@@ -9,23 +9,14 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            radSaKlasom();
+            NovaKlasa klasa = new NovaKlasa();
+            Console.WriteLine(klasa.color);
             Console.ReadKey();
         }
        
-        static void radSaKlasom () 
-        {
-            List<int> numbers = new List<int>();
-            numbers.Add(24);
-            numbers.Add(20);
+        
 
-            NovaKlasa.logFileName = "C:\\proba.log";
-            foreach (int i in numbers) 
-            {
-                NovaKlasa.log("uneti broj je" + Convert.ToString(i));
-            }
-
-        }      
+        
          
 
     

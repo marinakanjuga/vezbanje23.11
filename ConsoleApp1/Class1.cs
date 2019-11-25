@@ -7,9 +7,10 @@ namespace ConsoleApp1
 {
     class NovaKlasa
     {
+        public string color = "red"; 
         public static string logFileName = "C:\\proba.log";
 
-
+        
         public static void log(string logMessage)
         {
             using (StreamWriter file = new StreamWriter(logFileName, true))
