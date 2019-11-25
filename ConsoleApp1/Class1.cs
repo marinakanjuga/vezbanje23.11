@@ -21,5 +21,16 @@ namespace ConsoleApp1
                 file.WriteLine();
             }
         }
+
+        public static void nizovi () 
+        {
+            Console.WriteLine("unesite broj redova");
+            int a;
+            a = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i <= a; i++) 
+            {
+                Console.WriteLine(i);
+            }
+        }
     }
 }
