@@ -10,36 +10,56 @@ namespace ConsoleApp1
         {
 
             
-            //1.zadatak
 
-            Console.WriteLine("unesite dva broja");
-            double a;
-            double b;
-            a = Convert.ToDouble(Console.ReadLine());
-            b = Convert.ToDouble(Console.ReadLine());
-            if (a%2==0 && b%2==0) 
+
+            Console.WriteLine("unesite brojeve");
+            List<int> brojevi = new List<int>();
+            int a;
+            string b;
+            do
             {
-                double rezultat = a * b;
-                Console.WriteLine("rezultat je {0}", rezultat);
-            }
-            else if (!(a % 2 == 0) && !(b % 2 == 0)) 
-            {
-                double rezultat = a + b;
-                Console.WriteLine("rezultat je {0}", rezultat);
-            }
-            else if ((!(a % 2 == 0) && b % 2 == 0) || (a % 2 == 0 && !(b % 2 == 0)))
-            {
-                double rezultat;
-                if (a>b)
+                b = Console.ReadLine();
+                a = Convert.ToInt32(b);
+                if (a < 0)
                 {
-                    rezultat = a / b;
+                    break;
                 }
-                else 
-                {
-                    rezultat = b / a;
-                }
-                Console.WriteLine("rezultat je {0}", rezultat);
+                brojevi.Add(a);
+            } while (true);
+
+            Console.WriteLine(SumaUnetihBrojeva(brojevi));
+            Console.WriteLine(AritmetickaSredina(brojevi));
+            SortiranaLista(brojevi);
+            Console.ReadKey();
+        }
+
+        static int SumaUnetihBrojeva (List<int> brojevi) 
+        {
+            int sum = 0;
+            foreach (int i in brojevi) 
+            {
+                sum += i;
             }
+            return sum;
+        }
+        static int AritmetickaSredina (List<int> brojevi)
+        {
+            //double r;
+            int rez = 0;
+            double rez1 = Convert.ToDouble(rez);
+            rez1 = brojevi.Average();
+            return rez;          
+        }
+
+        static void SortiranaLista(List<int> brojevi)
+        {                       
+            brojevi.Sort();
+            foreach (int broj in brojevi) 
+            {
+                Console.WriteLine(broj);
+            }
+            
+
         }
     }
 }
